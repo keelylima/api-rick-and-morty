@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="rickMorty">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,25 +12,29 @@
     <script src="js/service/RickMortyApiService.js"></script>
     <title>Rick And Morty</title>
 </head>
+
 <body ng-controller="rickMortyController">
-    <section>
-        <h1>Rick and Morty - API</h1>
+    <div class="container">
+        <section>
+            <h1>Rick and Morty - API</h1>
 
-        <div>
-            <input type="search" placeholder="Rick Sanchez">
-        </div>
-    </section>
+            <div>
+                <input type="search" placeholder="Rick Sanchez">
+            </div>
+        </section>
 
-    <section>
-        <div class="card">
-            <ul ng-repeat="char in chars">
-                <li>Nome: {{ char.name }}</li>
-                <li><img src="{{ char.image }}"></li>
-                <li>Espécie: {{ char.species }}</li>
-                <li ng-show="char.type">Tipo: {{ char.type }}</li>
-                <li>Localização: {{ char.location.name }}</li>
-            </ul>
-        </div>
-    </section>
+        <section>
+            <div class="card">
+                <ul ng-repeat="char in chars">
+                    <li>{{ char.name }}</li>
+                    <li><img src="{{ char.image }}"></li>
+                    <li>Espécie: {{ char.species }}</li>
+                    <li ng-show="char.type">Tipo: {{ char.type }}</li>
+                    <li>Localização: {{ char.location.name }}</li>
+                </ul>
+            </div>
+        </section>
+    </div>
 </body>
+
 </html>
