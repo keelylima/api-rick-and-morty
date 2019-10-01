@@ -65,3 +65,24 @@ input:focus {
     outline: none;
     border-color: #A9D3E9;
 }
+
+button {
+    padding: 10px 50px 10px 50px;
+    background: transparent;
+    border: 2px solid #4d4d4d;
+    border-radius: 5px;
+    display: block;
+    cursor: pointer;
+    margin: 0 auto 50px auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #4d4d4d;
+}
+
+button:hover {
+    border: 2px solid #A9D3E9;
+}
+
+button:focus {
+    outline: none;
+}
