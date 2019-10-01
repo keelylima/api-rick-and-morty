@@ -18,14 +18,14 @@
         <section>
             <h1>Rick and Morty - API</h1>
 
-            <div>
-                <input type="search" placeholder="Rick Sanchez">
+            <div class="input-search">
+                <input type="search" placeholder="Ex.: Rick Sanchez" ng-model="search">
             </div>
         </section>
 
         <section>
             <div class="card">
-                <ul ng-repeat="char in chars">
+                <ul ng-repeat="char in chars | filter: { name: search }">
                     <li>{{ char.name }}</li>
                     <li><img src="{{ char.image }}"></li>
                     <li>Espécie: {{ char.species }}</li>
